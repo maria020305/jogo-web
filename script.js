@@ -13,11 +13,11 @@ document.addEventListener("keydown", (e) => {
   if (!running || paused) return;
 
   if (e.key === "ArrowLeft" && playerX > 0) {
-    playerX -= 30;
+    playerX -= 40;
   }
 
   if (e.key === "ArrowRight" && playerX < 350) {
-    playerX += 30;
+    playerX += 40;
   }
 
   player.style.left = playerX + "px";
@@ -94,7 +94,7 @@ function checkGame() {
     restartGame();
   }
 
-  if (score <= -3) {
+  if (score <= -5) {
     running = false;
     alert("Você foi demitido!");
     restartGame();
